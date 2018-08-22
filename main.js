@@ -10,7 +10,12 @@ process.on('exit', ()=>{
 
 //const num = parseInt( process.argv[2] )
 //console.log(process.argv)
-const num = parseInt( process.argv[2] )
+
+const arqv = require('yargs').demandOption('num').argv
+
+
+//const num = parseInt( process.argv[2] )
+const num = arqv.num
 
 
 console.log(`o fatorial de 5 é igual a ${fatorial(num)}`)
